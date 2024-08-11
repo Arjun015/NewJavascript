@@ -1,0 +1,312 @@
+# program 1 
+
+Q1-write a program to create two threads so one threads will print ascending order number 1 to 10
+ where as second thread will print descending number between 10 to 1 in Java.
+
+
+class AscendingThread implements Runnable {
+    public void run() {
+        for (int i = 1; i <= 10; i++) {
+            System.out.println("Ascending Thread: " + i);
+        }
+    }
+}
+
+class DescendingThread implements Runnable {
+    public void run() {
+        for (int i = 10; i >= 1; i--) {
+            System.out.println("Descending Thread: " + i);
+        }
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Thread t1 = new Thread(new AscendingThread());
+        Thread t2 = new Thread(new DescendingThread());
+        
+        t1.start();
+        t2.start();
+    }
+}
+
+#output:
+Ascending Thread: 1
+Descending Thread: 10
+Ascending Thread: 2
+Descending Thread: 9
+Ascending Thread: 3
+Descending Thread: 8
+Ascending Thread: 4
+Descending Thread: 7
+Ascending Thread: 5
+Descending Thread: 6
+Ascending Thread: 6
+Descending Thread: 5
+Ascending Thread: 7
+Descending Thread: 4
+Ascending Thread: 8
+Descending Thread: 3
+Ascending Thread: 9
+Descending Thread: 2
+Ascending Thread: 10
+Descending Thread: 1
+
+/*********************************************************/
+
+program 2 
+Q2:-write a program to create two threads one to print number 
+    in original order and other in reverse order from 1 to 50 in java
+
+
+
+  class OriginalOrderThread implements Runnable {
+    public void run() {
+        for (int i = 1; i <= 50; i++) {
+            System.out.println("Original Order Thread: " + i);
+        }
+    }
+}
+
+class ReverseOrderThread implements Runnable {
+    public void run() {
+        for (int i = 50; i >= 1; i--) {
+            System.out.println("Reverse Order Thread: " + i);
+        }
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Thread t1 = new Thread(new OriginalOrderThread());
+        Thread t2 = new Thread(new ReverseOrderThread());
+
+        t1.start();
+        t2.start();
+    }
+}
+/***************************************************************/
+program 3
+Q: write a program to accept password from and throw "authentication failure" exception if the password
+   is incorrect in java?
+
+
+   
+import java.util.Scanner;
+
+class AuthenticationException extends Exception {
+    public AuthenticationException(String message) {
+        super(message);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        String password = "password123";
+
+        System.out.print("Enter password: ");
+        String userPassword = input.nextLine();
+
+        try {
+            if (!userPassword.equals(password)) {
+                throw new AuthenticationException("Authentication Failure");
+            } else {
+                System.out.println("Authentication Successful");
+            }
+        } catch (AuthenticationException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+}
+
+
+/****************************************************/
+
+program 4 
+Q:- write a program to throw a user define exception as "invalid age" if age enter by the user is less
+   than eighteen in java ?
+
+   
+import java.util.Scanner;
+
+class InvalidAgeException extends Exception {
+    public InvalidAgeException(String message) {
+        super(message);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter your age: ");
+        int age = input.nextInt();
+
+        try {
+            if (age < 18) {
+                throw new InvalidAgeException("Invalid Age: Age cannot be less than 18");
+            } else {
+                System.out.println("Age entered: " + age);
+            }
+        } catch (InvalidAgeException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+}
+
+**************************************************************
+Q:Program 5 -: write a thread program for implementing the runnable interface in java
+
+public class MyRunnable implements Runnable {
+    public void run() {
+        System.out.println("Thread is running");
+    }
+
+    public static void main(String[] args) {
+        MyRunnable myRunnable = new MyRunnable();
+        Thread thread = new Thread(myRunnable);
+        thread.start();
+    }
+}
+
+**********************************************************************
+Program 6
+Q: write a program to demonstrate a multiple inheritance in java ? 
+
+interface Interface1 {
+    void method1();
+}
+
+interface Interface2 {
+    void method2();
+}
+
+class MyClass implements Interface1, Interface2 {
+    public void method1() {
+        System.out.println("Method 1");
+    }
+
+    public void method2() {
+        System.out.println("Method 2");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        MyClass myClass = new MyClass();
+        myClass.method1();
+        myClass.method2();
+    }
+}
+
+****************************************************************
+Program 7
+Q:- write a program to implement the following hierarchy following hierarchy information of each
+    class the rectangle represent the classes in java?
+Ans:-
+
+
+Shape
+  |
+Rectangle
+  |
+Square
+
+
+
+class Shape {
+    protected int length;
+    protected int width;
+    
+    public void setDimensions(int length, int width) {
+        this.length = length;
+        this.width = width;
+    }
+    
+    public void display() {
+        System.out.println("Length: " + length);
+        System.out.println("Width: " + width);
+    }
+}
+
+class Rectangle extends Shape {
+    public int area() {
+        return length * width;
+    }
+}
+
+class Square extends Rectangle {
+    public void setDimensions(int side) {
+        super.setDimensions(side, side);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Square square = new Square();
+        square.setDimensions(5);
+        square.display();
+        System.out.println("Area: " + square.area());
+    }
+}
+
+output:
+
+Length: 5
+Width: 5
+Area: 25
+
+
+****************************************************
+
+Q : how to multiple inheritance in archieved in java ? give example
+
+In Java, multiple inheritance is not supported for classes, but it can be achieved using interfaces. A class can implement multiple interfaces, which can be used to achieve the
+  functionality of multiple inheritance.
+
+
+  Here's an example:
+
+
+
+  interface A {
+    void foo();
+}
+
+interface B {
+    void bar();
+}
+
+class MyClass implements A, B {
+    public void foo() {
+        System.out.println("Method foo() from interface A");
+    }
+
+    public void bar() {
+        System.out.println("Method bar() from interface B");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        MyClass myClass = new MyClass();
+        myClass.foo();
+        myClass.bar();
+    }
+}
+
+Explanation:
+
+The program defines two interfaces A and B, each with a single method.
+The MyClass class implements both A and B interfaces and provides concrete implementations of
+ their respective methods.
+The main() method creates an instance of the MyClass class and calls its foo() and bar() methods.
+When you run the program, it will call the foo() and bar() methods of the MyClass object and 
+print "Method foo() 
+from interface A" and "Method bar() from interface B" to the console, respectively. 
+This demonstrates how to achieve multiple inheritance in Java using interfaces.
+
+*************************************************************
+Q : define an Exception called no match exception that is throw When a string not equal to 
+    "MSBT" write program

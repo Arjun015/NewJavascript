@@ -1,0 +1,27 @@
+
+Program-1 : program of reverse string //o/p: Jadhav Arjun Prakash
+Program-2 : program of whole string are not only reverse string of each character
+Program-3 : find the Largest number 
+Program-4 : find the Largest number in given Array
+Program-5 : Count the vowel in the given string
+Program-6 : find the first occurence of each character 
+                               let a = "Mango banana apple pear, 
+                                        Banana grapes strawberry, 
+                                        Apple pear mango banana, 
+                                        Kiwi apple mango strawberry" 
+
+Program-7 : find the duplicates number in given Array
+Program-8 : find the duplicates character in the given string
+Program-9 : find the number occurence in number data Types
+Program-10 : find the Even or Odd number 
+Program-11 : let string1 = "silent" and string2 ="listen If string having length 
+                   is same then outPut will be true ,otherwise not match then false in Javascript ?    
+
+Program-12 : find the Prime number
+Program-13 : find the fibonisis number      
+Program-14 : JavaScript Program to Add Two Numbers/Three Numbers
+Program-15 : To Check a Number is Odd or Even   
+Program-14 : Find the sum of 1 to 50 number 
+Program-15 : find the second largest number in the given Array
+Program-16 : find the sorted number Array 
+Program-17 : find the sorted string                                               
