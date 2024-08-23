@@ -15,7 +15,7 @@ if(num1 > num2 && num2 > num3){
 }
 
 
-
+/*
 
 // greatest number is Array
 
@@ -36,3 +36,18 @@ for(let i=0 ; i<arrA.length;i++){
 }
 //console.log(arrA)
 console.log(largest)
+
+
+*/
+//---------------------------------------
+
+let largArray = [11,45,100,32,90,54]
+let largestNum = largArray[0] //11
+
+for(let i=0 ; i < largArray.length ; i++){
+    if(largArray[i] > largestNum){
+        largestNum = largArray[i]
+    }
+}
+//console.log(largArray)
+console.log(largestNum)

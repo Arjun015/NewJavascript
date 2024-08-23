@@ -12,13 +12,13 @@ console.log(ouPut)
 // let str = ""
 // for(let i=0 ; i< MyNameis.length ; i++){
 //      str = MyNameis[i] + str
-    
+
 // }
 // console.log(str) 
 // // output is "elasohB ijahahs ijavihs" but I want to output is "Bhosale shahaji shivaji"
 
 //Program:2 
-
+/*
 let MyNameis = "shivaji shahaji Bhosale"
 let str = ""
 let word = ""
@@ -30,7 +30,6 @@ for(let i=MyNameis.length-1 ; i>=0 ; i--){ // Traverse the string from end to st
         word = "" //// Reset word for the next word
     }
 }
-
 str = str + word  // Add the last word (since there is no space after it)
 console.log(str)
 
@@ -52,3 +51,38 @@ for(let i =nameAA.length-1 ; i>=0 ; i-- ){ // reverese looping
 strr = strr + wordd
 console.log(strr)
 
+
+*/
+
+// reverse string Program 
+
+let fullName = "Supriya Ajay Jadhav"
+let revString = ""
+for (let i = fullName.length - 1; i >= 0; i--) {
+    //revString = fullName[i] + revString
+    revString += fullName[i]
+}
+console.log(revString)
+
+// using function
+
+function ReverseString(str) {
+    let revStr = ""
+    for (let i = str.length - 1; i >= 0; i--) {
+        revStr += str[i]
+    }
+}
+
+ ReverseString('Ajay Jadhav')
+
+
+
+
+
+
+// let original = "Hello World";
+// let reversed = "";
+// for (let i = original.length - 1; i >= 0; i--) {
+//     reversed += original[i];
+// }
+// console.log(reversed);
