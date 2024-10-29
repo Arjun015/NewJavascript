@@ -9,7 +9,7 @@
 
 // Approch-1
 
-let str = 'Lord shiva is the greatest in the world'
+let str = 'Lord shiva is the greatest god in the world'
 let countVowel = str.match(/AEIOUaeiou/ig,'').length
 console.log(countVowel)
 
